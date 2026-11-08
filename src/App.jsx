@@ -13,11 +13,11 @@ export default function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<HomePage />} />
-        <Route path="services" element={<ServicesPage />} />
-        <Route path="who-we-are" element={<WhoWeArePage />} />
-        <Route path="team" element={<TeamPage />} />
-        <Route path="contact" element={<ContactPage />} />
-        <Route path="*" element={<NotFoundPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/who-we-are" element={<WhoWeArePage />} />
+        <Route path="/team" element={<TeamPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/*" element={<NotFoundPage />} />
       </Route>
     </Routes>
   );

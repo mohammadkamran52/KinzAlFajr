@@ -10,7 +10,7 @@ import Logo from "@/components/ui/Logo";
 
 const focusRing =
   "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
-const linkClass = `inline-flex min-h-11 items-center text-ink-muted transition-colors hover:text-primary ${focusRing}`;
+const linkClass = `inline-flex min-h-11 py-2 items-center text-ink-muted transition-colors hover:text-primary ${focusRing}`;
 const headingClass = "font-heading text-lg font-semibold text-ink";
 const rowClass = "flex items-start gap-3";
 const iconClass = "mt-3 size-4 shrink-0 text-primary";
