@@ -8,9 +8,11 @@ export const company = {
     description:
       "KAF Technical Services provides finishing, fit-out and maintenance works for homes, offices and buildings. We focus on clear planning, careful workmanship and honest communication.",
   
-    phone: "+91 8651093587",
-    whatsapp: "+91 8651093587",
-    email: "ashadab2542@gmail.com",
+    phone: "+971559225591",
+    phone2: "+91 9667226511",
+    whatsapp: "971559225591",
+    whatsapp2: "919667226511",
+    email: "kaftechnicalservices@gmail.com",
     address: "Office Number 205, Entrance 3, Al Bahar building",
     city: "Al Khabeesi, Deira",
     country: "United Arab Emirates",
@@ -32,9 +34,11 @@ export const company = {
     },
   
     vision:
-      "To be a trusted name in finishing and technical services, known for careful work and honest relationships.",
+      // "To be a trusted name in finishing and technical services, known for careful work and honest relationships.",
+      "At Kinz Al Fajr Technical Services, our vision is to set the benchmark for excellence across the technical and contracting services industry. We aim to become the region’s most trusted partner by consistently delivering superior craftsmanship, innovative structural solutions, and unmatched operational reliability. By integrating sustainable practices, advanced techniques, and premium materials into every project—from intricate tiling and custom carpentry to comprehensive electrical and insulation systems—we strive to transform ordinary structures into functional, resilient masterpieces. Our commitment is to shape inspiring environments that enhance everyday living and working spaces while driving long-term value for residential and commercial clients alike.",
     mission:
-      "To deliver finishing and maintenance works with clear plans, skilled crews and open communication from the first quote to the final handover.",
+      // "To deliver finishing and maintenance works with clear plans, skilled crews and open communication from the first quote to the final handover.",
+      "Our mission at Kinz Al Fajr Technical Services is to empower property owners and businesses through dependable, top-tier technical and maintenance solutions. We are dedicated to providing comprehensive end-to-end services, spanning precision masonry, expert plumbing, flawless painting, and tailored ceiling installations. Through continuous quality control, transparent project management, and adherence to rigorous safety standards, we ensure seamless execution from initial design to final delivery. By nurturing a culture of professional integrity and technical innovation, we maximize durability and aesthetic appeal for every building we touch, ensuring maximum client satisfaction and establishing enduring partnerships built on trust, efficiency, and exceptional quality.",
     values: [
       {
         title: "Reliability",

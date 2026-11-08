@@ -1,23 +1,20 @@
-// Builds WhatsApp, email and phone links. Reads company.whatsapp, company.email, company.phone.
+// Builds WhatsApp, email and phone links. Reads company.js (phone, whatsapp, email).
 import { company } from "@/data/company";
 
-// Returns "" when the number is not provided yet, so callers can hide the link.
-export function whatsappLink(message = "") {
-  const number = (company.whatsapp || "").replace(/\D/g, "");
-  if (!number) return "";
-  const base = `https://wa.me/${number}`;
-  return message ? `${base}?text=${encodeURIComponent(message)}` : base;
+// number defaults to the main WhatsApp; pass company.whatsapp2 for the second one
+export function whatsappLink(message = "", number = company.whatsapp) {
+  const text = message ? `?text=${encodeURIComponent(message)}` : "";
+  return `https://wa.me/${number}${text}`;
 }
 
 export function mailtoLink(subject = "", body = "") {
-  if (!company.email) return "";
   const params = [];
   if (subject) params.push(`subject=${encodeURIComponent(subject)}`);
   if (body) params.push(`body=${encodeURIComponent(body)}`);
   return `mailto:${company.email}${params.length ? `?${params.join("&")}` : ""}`;
 }
 
-export function telLink() {
-  const phone = (company.phone || "").replace(/\s+/g, "");
-  return phone ? `tel:${phone}` : "";
+// number defaults to the main phone; pass company.phone2 for the second one
+export function telLink(number = company.phone) {
+  return `tel:${number.replace(/\s+/g, "")}`;
 }

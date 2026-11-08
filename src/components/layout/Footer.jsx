@@ -17,11 +17,11 @@ const iconClass = "mt-3 size-4 shrink-0 text-primary";
 
 // Order of the social links. Only the ones filled in company.social are shown.
 const socialNetworks = [
-  { key: "instagram", label: "Instagram" },
-  { key: "facebook", label: "Facebook" },
-  { key: "linkedin", label: "LinkedIn" },
-  { key: "x", label: "X" },
-  { key: "youtube", label: "YouTube" },
+  // { key: "instagram", label: "Instagram" },
+  // { key: "facebook", label: "Facebook" },
+  // { key: "linkedin", label: "LinkedIn" },
+  // { key: "x", label: "X" },
+  // { key: "youtube", label: "YouTube" },
 ];
 
 export default function Footer() {
@@ -30,6 +30,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-line bg-surface-alt text-ink">
       <Container className="grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-4">
+        
         {/* Brand */}
         <div>
           <Link to="/" className={`inline-flex items-center ${focusRing}`}>
@@ -109,7 +110,28 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className={linkClass}
                 >
-                  WhatsApp
+                  WhatsApp UAE
+                </a>
+              </li>
+            )}
+            {company.phone2 && (
+              <li className={rowClass}>
+                <Phone className={iconClass} aria-hidden="true" />
+                <a href={telLink()} className={linkClass}>
+                  {company.phone2}
+                </a>
+              </li>
+            )}
+            {company.whatsapp2 && (
+              <li className={rowClass}>
+                <MessageCircle className={iconClass} aria-hidden="true" />
+                <a
+                  href={whatsappLink()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={linkClass}
+                >
+                  WhatsApp IN
                 </a>
               </li>
             )}

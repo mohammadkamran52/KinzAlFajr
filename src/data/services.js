@@ -19,6 +19,8 @@ export const services = [
       image: "",
       featured: true,
     },
+
+
     {
       id: "carpentry-wood-flooring",
       title: "Carpentry & Wood Flooring Works",
@@ -36,6 +38,8 @@ export const services = [
       image: "",
       featured: true,
     },
+
+
     {
       id: "false-ceiling-partitions",
       title: "False Ceiling & Light Partitions Installation",
@@ -53,6 +57,8 @@ export const services = [
       image: "",
       featured: true,
     },
+
+
     {
       id: "plaster-works",
       title: "Plaster Works",
@@ -70,6 +76,8 @@ export const services = [
       image: "",
       featured: false,
     },
+
+
     {
       id: "painting-contracting",
       title: "Painting Contracting",
@@ -87,6 +95,8 @@ export const services = [
       image: "",
       featured: true,
     },
+
+
     {
       id: "sanitary-pipes",
       title: "Sanitary Installation & Pipes Repairing",
@@ -104,6 +114,8 @@ export const services = [
       image: "",
       featured: false,
     },
+
+
     {
       id: "building-cleaning",
       title: "Building Cleaning Services",
@@ -121,6 +133,8 @@ export const services = [
       image: "",
       featured: true,
     },
+
+
     {
       id: "electrical-maintenance",
       title: "Electrical Fittings & Fixtures Repairing & Maintenance",
@@ -138,6 +152,8 @@ export const services = [
       image: "",
       featured: true,
     },
+
+
     {
       id: "insulation-contracting",
       title: "Insulation Contracting",
@@ -155,6 +171,8 @@ export const services = [
       image: "",
       featured: false,
     },
+
+    
     {
       id: "engraving-ornamentation",
       title: "Engraving & Ornamentation Works",

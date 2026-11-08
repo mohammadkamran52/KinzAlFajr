@@ -5,12 +5,12 @@ export const pagesContent = {
     home: {
       title: "KAF Technical Services | Finishing works for homes and buildings",
       description:
-        "Tiling, carpentry, ceilings, plaster, painting, plumbing, electrical, cleaning, insulation and ornamental works. Request a quote from KAF Technical Services.",
+        "Tiling, carpentry, ceilings, plaster, painting, plumbing, electrical, cleaning, insulation and ornamental works.",
       hero: {
         headline: "Finishing works for homes and buildings, done properly.",
         subheadline:
           "From tiling and carpentry to painting and maintenance, one team that plans carefully, works neatly and keeps you informed.",
-        primaryCta: "Get a quote",
+        // primaryCta: "Get a quote",
         secondaryCta: "View our services",
       },
       about: {
@@ -25,7 +25,7 @@ export const pagesContent = {
         "See every service offered by KAF Technical Services, from floor and wall tiling to insulation, electrical maintenance and building cleaning.",
       heading: "Our services",
       intro:
-        "Ten trades under one roof. Choose a service to see what it includes, then request a quote.",
+        "Ten trades under one roof. Choose a service to see what it includes.",
     },
   
     whoWeAre: {
@@ -36,8 +36,8 @@ export const pagesContent = {
       intro:
         "A finishing and technical services company built around careful work and clear communication.",
       story: [
-        "[PLACEHOLDER: company story, paragraph 1. Add the real history of the company.]",
-        "[PLACEHOLDER: company story, paragraph 2. Add what makes the company's way of working different.]",
+        // "[PLACEHOLDER: company story, paragraph 1. Add the real history of the company.]",
+        // "[PLACEHOLDER: company story, paragraph 2. Add what makes the company's way of working different.]",
       ],
     },
   
