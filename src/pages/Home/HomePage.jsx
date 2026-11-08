@@ -126,6 +126,7 @@ export default function HomePage() {
       )}
 
       <TestimonialsSection limit={3} />
+      <CallToAction />
     </>
   );
 }

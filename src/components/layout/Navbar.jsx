@@ -122,7 +122,7 @@ export default function Navbar() {
             </ul>
           </nav>
           {navCta?.label && (
-            <Button to={navCta.pathna} className="mt-4 w-full">
+            <Button to={navCta.path} className="mt-4 w-full">
               {navCta.label}
             </Button>
           )}

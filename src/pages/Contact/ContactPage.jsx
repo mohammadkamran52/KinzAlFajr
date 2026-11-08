@@ -1,12 +1,12 @@
 // Contact page: contact details plus a quote form that opens WhatsApp with the message ready.
-// Reads company (phone, phone2, whatsapp, whatsapp2...), services and pagesContent.contact. Nothing is sent from this site.
+// Reads company (both contact numbers, email, address...), services and pagesContent.contact. Nothing is sent from this site.
 import { useState } from "react";
 import { useSearchParams } from "react-router";
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { company } from "@/data/company";
 import { pagesContent } from "@/data/pages";
 import { services } from "@/data/services";
-import { mailtoLink, telLink, whatsappLink } from "@/utils/contactLinks";
+import { contactNumbers, mailtoLink, telLink, whatsappLink } from "@/utils/contactLinks";
 import PageMeta from "@/components/layout/PageMeta";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
@@ -15,7 +15,7 @@ import PageHero from "@/components/sections/PageHero";
 // Shared class strings for the form fields (all colours are semantic tokens)
 const labelClass = "mb-1 block font-semibold text-ink";
 const inputClass =
-  "block min-h-11 w-full rounded-sm border border-line bg-surface px-3 py-2 text-ink placeholder:text-ink-muted aria-[invalid=true]:border-danger focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+  "block min-h-11 w-full rounded-sm border border-ink-muted bg-surface px-3 py-2 text-ink placeholder:text-ink-muted aria-[invalid=true]:border-danger focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 const errorClass = "mt-1 text-sm text-danger";
 const linkClass =
   "font-semibold text-ink underline underline-offset-4 transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
@@ -72,35 +72,37 @@ export default function ContactPage() {
   });
   const [errors, setErrors] = useState({});
 
+  // Each filled-in number (Dubai, India) gets a phone row and a WhatsApp row.
+  const numberDetails = contactNumbers().flatMap((number) => {
+    const prefix = number.label ? `${number.label} ` : "";
+    return [
+      {
+        id: `${number.id}-phone`,
+        label: `${prefix}phone`.replace(/^./, (c) => c.toUpperCase()),
+        value: number.phone,
+        href: number.phone ? telLink(number.phone) : "",
+        Icon: Phone,
+      },
+      {
+        id: `${number.id}-whatsapp`,
+        label: `${prefix}WhatsApp`.replace(/^./, (c) => c.toUpperCase()),
+        value: number.whatsapp ? number.whatsappDisplay : "",
+        href: number.whatsapp ? whatsappLink("", number.whatsapp) : "",
+        external: true,
+        Icon: MessageCircle,
+      },
+    ];
+  });
+
+  const fullAddress = [company.address, company.city, company.country]
+    .filter(Boolean)
+    .join(", ");
+
   // Entries with an empty value are removed by the filter below.
-  // The second phone and second WhatsApp are optional.
   const details = [
-    { id: "phone", label: "Phone", value: company.phone, href: telLink(company.phone), Icon: Phone },
-    {
-      id: "phone2",
-      label: "Phone 2",
-      value: company.phone2,
-      href: company.phone2 ? telLink(company.phone2) : "",
-      Icon: Phone,
-    },
-    {
-      id: "whatsapp",
-      label: "WhatsApp",
-      value: company.whatsapp ? `+${company.whatsapp}` : "",
-      href: company.whatsapp ? whatsappLink("", company.whatsapp) : "",
-      external: true,
-      Icon: MessageCircle,
-    },
-    {
-      id: "whatsapp2",
-      label: "WhatsApp 2",
-      value: company.whatsapp2 ? `+${company.whatsapp2}` : "",
-      href: company.whatsapp2 ? whatsappLink("", company.whatsapp2) : "",
-      external: true,
-      Icon: MessageCircle,
-    },
+    ...numberDetails,
     { id: "email", label: "Email", value: company.email, href: mailtoLink(), Icon: Mail },
-    { id: "address", label: "Address", value: company.address, href: "", Icon: MapPin },
+    { id: "address", label: "Address", value: fullAddress, href: "", Icon: MapPin },
     { id: "hours", label: "Opening hours", value: company.hours, href: "", Icon: Clock },
   ].filter((detail) => detail.value);
 
@@ -120,7 +122,7 @@ export default function ContactPage() {
       document.getElementById(`contact-${firstInvalid}`)?.focus();
       return;
     }
-    // The form always opens the main WhatsApp number
+    // The form always opens the main (Dubai) WhatsApp number
     window.open(
       whatsappLink(buildMessage(values), company.whatsapp),
       "_blank",

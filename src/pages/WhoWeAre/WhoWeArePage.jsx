@@ -105,6 +105,7 @@ export default function WhoWeArePage() {
       )}
 
       <TestimonialsSection />
+      <CallToAction />
     </>
   );
 }

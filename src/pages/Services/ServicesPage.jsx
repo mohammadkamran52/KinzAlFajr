@@ -19,6 +19,7 @@ export default function ServicesPage() {
           <ServicesGrid variant="detailed" />
         </Container>
       </section>
+      <CallToAction />
     </>
   );
 }

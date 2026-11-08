@@ -19,6 +19,7 @@ export default function TeamPage() {
           <TeamGrid />
         </Container>
       </section>
+      <CallToAction />
     </>
   );
 }
