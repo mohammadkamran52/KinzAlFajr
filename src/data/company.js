@@ -2,7 +2,7 @@
 // Edit this file to change anything about the company. Read by Logo, Footer, contactLinks, ContactPage and WhoWeArePage.
 
 export const company = {
-    name: "KAF Technical Services",
+    name: "Kinz Al Fajr Technical Services LLC.",
     shortName: "KAF",
     tagline: "Finishing works for homes and buildings, done properly.",
     description:
@@ -11,8 +11,8 @@ export const company = {
     phone: "+91 8651093587",
     whatsapp: "+91 8651093587",
     email: "ashadab2542@gmail.com",
-    address: "[PLACEHOLDER: office address]",
-    city: "",
+    address: "Office Number 205, Entrance 3, Al Bahar building",
+    city: "Al Khabeesi, Deira",
     country: "United Arab Emirates",
     hours: "",
     mapEmbedUrl: "",

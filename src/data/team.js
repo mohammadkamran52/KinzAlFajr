@@ -5,9 +5,9 @@
 export const team = [
     {
       id: "sajid-akhtar",
-      name: "Sajid Akhtar Mohammad Qasim Akhtar",
+      name: "Sajid Akhtar",
       role: "Chief Executive Officer (CEO)",
-      department: "Management",
+      department: "Management Head",
       photo: "",
       bio: "",
       statement:
@@ -16,9 +16,9 @@ export const team = [
     },
     {
       id: "abdul-shadab",
-      name: "Abdul Shadab Abdul Mannan",
-      role: "Chief Operating Officer (COO) and Operations Head",
-      department: "Operations",
+      name: "Shaikh Abdul Shadab",
+      role: "Chief Operating Officer (COO)",
+      department: "Operations Head",
       photo: "",
       bio: "",
       statement:
@@ -28,8 +28,8 @@ export const team = [
     {
       id: "zeeshan-ansari",
       name: "Mohammad Zeeshan Ansari",
-      role: "Chief Marketing Officer (CMO) and Marketing Head",
-      department: "Marketing",
+      role: "Chief Marketing Officer (CMO)",
+      department: "Marketing Head",
       photo: "",
       bio: "",
       statement:
@@ -39,8 +39,8 @@ export const team = [
     {
       id: "owais-usmani",
       name: "Owais Usmani",
-      role: "Chief Financial Officer (CFO) and Head of Accounts",
-      department: "Finance",
+      role: "Chief Financial Officer (CFO)",
+      department: "Finance Head",
       photo: "",
       bio: "",
       statement:
