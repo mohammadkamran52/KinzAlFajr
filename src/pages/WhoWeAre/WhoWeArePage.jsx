@@ -104,7 +104,7 @@ export default function WhoWeArePage() {
         </section>
       )}
 
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <CallToAction />
     </>
   );

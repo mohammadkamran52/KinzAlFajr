@@ -121,57 +121,69 @@ export default function Footer() {
           <div className="flex flex-col grid sm:grid-rows-2 lg:grid-rows-2">
             <div className="row-span-1">
               <h2 className={headingClass}>Contact</h2>
-              <ul className="flex flex-row grid gap-6 py-8 sm:grid-cols-6 lg:grid-cols-6">
+              <ul className="grid justify-start items-start w-full py-8 gap-4 grid-cols-6 lg:grid-cols-6">
                 {numbers.map((number) => (
                   <Fragment key={number.id}>
                     {number.phone && (
-                      <li className={`${rowClass} col-span-1`}>
-                        <Phone className={iconClass} aria-hidden="true" />
-                        <a
+                      <li className={`${rowClass} flex items-start`}>
+                        <a 
                           href={telLink(number.phone)}
-                          className={`${linkClass} group flex flex-col`}
+                          className={`${linkClass} group flex flex-col items-center gap-3`}
                         >
-                          Call us...
-                          <br></br>
-                          <span className="hidden group-hover:block">
-                            {number.label ? `${number.label}` : number.phone}
+                          <Phone className={iconClass} aria-hidden="true" />
+                          <span className="flex flex-col items-center text-center">
+                            Call us...
+                            <span className="hidden group-hover:block">
+                              {number.label ? `${number.label}` : number.phone}
+                            </span>
                           </span>
                         </a>
                       </li>
                     )}
                     {number.whatsapp && (
-                      <li className={rowClass}>
-                        <MessageCircle className={iconClass} aria-hidden="true" />
+                      <li className={`${rowClass} flex items-start`}>
                         <a
                           href={whatsappLink("", number.whatsapp)}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`${linkClass} group flex flex-col`}
+                          className={`${linkClass} group flex flex-col items-center gap-3`}
                         >
-                          WhatsApp us...
-                          <br></br>
-                          <span className="hidden group-hover:block">
-                            {number.label ? `${number.label}` : "WhatsApp"}
+                          <MessageCircle className={iconClass} aria-hidden="true" />
+                          <span className="flex flex-col items-center text-center">
+                            WhatsApp us...
+                            <span className="hidden group-hover:block">
+                              {number.label ? `${number.label}` : "WhatsApp"}
+                            </span>
                           </span>
                         </a>
                       </li>
                     )}
                   </Fragment>
                 ))}
+
                 {company.email && (
-                  <li className={`${rowClass} col-span-1`}>
-                    
-                    <Mail className={iconClass} aria-hidden="true" />
-                    <a href={mailtoLink(company.email)} className={`${linkClass} break-all`}>
-                      Mail us...
+                  <li className={`${rowClass} flex items-start`}>
+                    <a 
+                      href={mailtoLink(company.email)} 
+                      className={`${linkClass} group flex flex-col items-center gap-3 break-all`}
+                    >
+                      <Mail className={iconClass} aria-hidden="true" />
+                      <span className="flex flex-col items-center text-center">
+                        Mail us...
+                      </span>
                     </a>
                   </li>
                 )}
+
                 {fullAddress && (
-                  <li className={`${rowClass} col-span-1`}>
-                    <MapPin className={`mt-1 size-4 shrink-0 text-primary ${iconClass}`} aria-hidden="true" />
-                    <a className={`${linkClass}`}>
-                      Locate us...
+                  <li className={`${rowClass} flex items-start`}>
+                    <a 
+                      className={`${linkClass} group flex flex-col items-center gap-3`}
+                    >
+                      <MapPin className={iconClass} aria-hidden="true" />
+                      <span className="flex flex-col items-center text-center">
+                        Locate us...
+                      </span>
                     </a>
                   </li>
                 )}
@@ -186,14 +198,14 @@ export default function Footer() {
             <div className="row-span-1">
               <h2 className={headingClass}>Follow us</h2>
               {socialLinks.length > 0 && (
-                <ul className={`flex justify-between items-center w-full gap-x-2 ${iconClass}`}>
+                <ul className={`flex justify-between px-2 py-8 mx-2 items-center w-full ${iconClass}`}>
                   {socialLinks.map((network) => (
                     <li key={network.key}>
                       <a
                         href={company.social[network.key]}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`${linkClass} ${iconClass}`}
+                        className={`${linkClass} ${iconClass} text-3xl`}
                       >
                         {getSocialIcon(network.key)}
                       </a>
