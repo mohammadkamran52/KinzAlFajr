@@ -16,7 +16,7 @@ export const services = [
         "Grouting and sealing",
         "Cleaning after installation",
       ],
-      image: "",
+      image: "/images/services/floor-wall-tiling.jpg",
       featured: true,
     },
 
@@ -35,7 +35,7 @@ export const services = [
         "Shelving and custom joinery",
         "Repairs and adjustments",
       ],
-      image: "",
+      image: "/images/services/carpentry-wood-flooring.jpg",
       featured: true,
     },
 
@@ -54,7 +54,7 @@ export const services = [
         "Access panels for services",
         "Jointing and surface finishing",
       ],
-      image: "",
+      image: "/images/services/false-ceiling-partitions.jpg",
       featured: true,
     },
 
@@ -73,7 +73,7 @@ export const services = [
         "Surface levelling",
         "Preparation for painting",
       ],
-      image: "",
+      image: "/images/services/plaster-works.jpg",
       featured: false,
     },
 
@@ -92,7 +92,7 @@ export const services = [
         "Protection of floors and furniture",
         "Final touch-ups",
       ],
-      image: "",
+      image: "/images/services/painting-contracting.jpg",
       featured: true,
     },
 
@@ -111,7 +111,7 @@ export const services = [
         "Pipe replacement and repair",
         "Testing after installation",
       ],
-      image: "",
+      image: "/images/services/sanitary-pipes.jpg",
       featured: false,
     },
 
@@ -130,7 +130,7 @@ export const services = [
         "Floor cleaning and polishing",
         "Common areas in buildings",
       ],
-      image: "",
+      image: "/images/services/building-cleaning.jpg",
       featured: true,
     },
 
@@ -149,7 +149,7 @@ export const services = [
         "Replacement of worn fittings",
         "Routine maintenance checks",
       ],
-      image: "",
+      image: "/images/services/electrical-maintenance.jpg",
       featured: true,
     },
 
@@ -168,7 +168,7 @@ export const services = [
         "Advice on suitable materials",
         "Neat finishing after installation",
       ],
-      image: "",
+      image: "/images/services/insulation-contracting.jpg",
       featured: false,
     },
 
@@ -187,7 +187,7 @@ export const services = [
         "Custom design to your brief",
         "Finishing and painting of details",
       ],
-      image: "",
+      image: "/images/services/engraving-ornamentation.jpg",
       featured: false,
     },
   ];
